@@ -58,7 +58,7 @@ terraform apply -var-file="terraform.tfvars"
 terraform output web_vm_public_ip
 
 Åpne:
-http://<IP>
+http://< IP >
 
 Vent 3–5 minutter etter deploy.
 

@@ -1,0 +1,37 @@
+# =============================================================================
+# Kopier til terraform.tfvars og fyll inn egne verdier før utrulling.
+# =============================================================================
+
+location            = "West Europe"
+resource_group_name = "rg-webdb-project"
+project_name        = "webdb"
+environment         = "dev"
+
+vnet_address_space = ["10.0.0.0/16"]
+web_subnet_cidr    = "10.0.1.0/24"
+db_subnet_cidr     = "10.0.2.0/24"
+
+admin_username = "azureuser"
+admin_password = "ENDRE_MEG_Strong_Password_123!"
+web_vm_size    = "Standard_B2s"
+db_vm_size     = "Standard_B2s"
+
+vm_image = {
+  publisher = "Canonical"
+  offer     = "0001-com-ubuntu-server-jammy"
+  sku       = "22_04-lts-gen2"
+  version   = "latest"
+}
+
+mysql_root_password = "ENDRE_MEG_MySQL_Root_Password!"
+mysql_database_name = "appdb"
+mysql_app_user      = "appuser"
+mysql_app_password  = "ENDRE_MEG_AppUser_Password!"
+
+tags = {
+  Project     = "webdb-project"
+  Environment = "dev"
+  ManagedBy   = "Terraform"
+  Owner       = "your-name"
+  CostCenter  = "task2"
+}

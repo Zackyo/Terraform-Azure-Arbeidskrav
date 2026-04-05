@@ -49,13 +49,13 @@ terraform apply -var-file="terraform.tfvars"
 
 Web:
 terraform output web_vm_public_ip
-Åpne http://<IP>
+Åpne http://< IP >
 
 API:
-curl http://<IP>/api/health
+curl http://< IP >/api/health
 
 Database:
-ssh azureuser@<IP>
+ssh azureuser@< IP >
 mysql -h <LB_IP> -u appuser -p
 
 SELECT * FROM products;
